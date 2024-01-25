@@ -1,0 +1,136 @@
+{
+  "Id": "a126e72d-9238-4412-b708-94730eb8eb6a",
+  "GameObjects": [
+    {
+      "Id": "88627c72-c92c-4cf2-b3fd-c96232c68415",
+      "Name": "Player",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "PlayerController",
+          "AnimationHelper": {
+            "_type": "component",
+            "go": "2e4d5921-3bf2-418b-b174-4b34361375d0",
+            "component_type": "CitizenAnimationHelper"
+          },
+          "CharacterController": {
+            "_type": "component",
+            "go": "88627c72-c92c-4cf2-b3fd-c96232c68415",
+            "component_type": "CharacterController"
+          },
+          "CrouchMoveSpeed": 64,
+          "RunMoveSpeed": 190,
+          "SprintMoveSpeed": 320,
+          "WalkMoveSpeed": 190
+        },
+        {
+          "__type": "CharacterController",
+          "Acceleration": 10,
+          "GroundAngle": 45,
+          "Height": 64,
+          "IgnoreLayers": "",
+          "Radius": 16,
+          "StepHeight": 18
+        }
+      ],
+      "Children": [
+        {
+          "Id": "2e4d5921-3bf2-418b-b174-4b34361375d0",
+          "Name": "body",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "SkinnedModelRenderer",
+              "BodyGroups": 341,
+              "BoneMergeTarget": null,
+              "CreateBoneObjects": false,
+              "MaterialGroup": null,
+              "MaterialOverride": null,
+              "Model": "models/citizen/citizen.vmdl",
+              "RenderType": "ShadowsOnly",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "CitizenAnimationHelper",
+              "BodyWeight": 1,
+              "EyeSource": "ecb5b623-0148-4648-875c-bbf4647035e3",
+              "EyesWeight": 1,
+              "HeadWeight": 1,
+              "Height": 1,
+              "IkLeftFoot": null,
+              "IkLeftHand": null,
+              "IkRightFoot": null,
+              "IkRightHand": null,
+              "LookAt": null,
+              "LookAtEnabled": false,
+              "Target": {
+                "_type": "component",
+                "go": "2e4d5921-3bf2-418b-b174-4b34361375d0",
+                "component_type": "SkinnedModelRenderer"
+              }
+            }
+          ]
+        },
+        {
+          "Id": "ecb5b623-0148-4648-875c-bbf4647035e3",
+          "Name": "eye",
+          "Position": "0,0,64",
+          "Enabled": true
+        }
+      ]
+    },
+    {
+      "Id": "72fdfb97-a957-4fc7-8ec8-a2c71e437418",
+      "Name": "Map",
+      "Position": "7.357712,-140.424,0.6549072",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "MapName": "facepunch.construct23",
+          "OnMapLoaded": null,
+          "OnMapUnloaded": null,
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "Id": "571b8e61-eba5-42d4-a040-1ad7f8419dfb",
+      "Name": "Camera",
+      "Position": "0,0,64",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 90,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true
+  },
+  "Title": "main",
+  "Description": "",
+  "__references": []
+}

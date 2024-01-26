@@ -16,7 +16,7 @@ public sealed class PlayerController : Component
 	[Sync] public bool Crouching { get; set; }
 	[Sync] public Angles EyeAngles { get; set; }
 	[Sync] public Vector3 WishVelocity { get; set; }
-
+	[Property] public CameraComponent camera { get; set; }
 	public bool WishCrouch;
 	public float EyeHeight = 64;
 
@@ -195,7 +195,7 @@ public sealed class PlayerController : Component
 
 	private void UpdateCamera()
 	{
-		var camera = Scene.GetAllComponents<CameraComponent>().Where( x => x.IsMainCamera ).FirstOrDefault();
+		//var camera = Scene.GetAllComponents<CameraComponent>().Where( x => x.IsMainCamera ).FirstOrDefault();
 		if ( camera is null ) return;
 
 		var targetEyeHeight = Crouching ? 28 : 64;
